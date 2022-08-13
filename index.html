@@ -8,11 +8,44 @@
     </head>
     
 <body>
-    <div class="nes-container with-title">
+    <div class="nes-container with-title first">
             <span class="title">Happy Birthday Adaline</span> 
             <p>Using your alias for privacy concerns since 2021</p>
-            <a class="nes-btn" href="#">Normal</a>
+            <p>PPTs are booring so this should do I hope</p>
+            <button type="button" class="nes-btn is-primary firstaage">Aage badho</button>
+            <button type="button" class="nes-btn is-error enditfirst">no poeh end it</button>
        </div>
+       <div class="nes-container with-title second">
+        <span class="title">Motivation</span> 
+        <p>You got this</p>
+        
+        <p>What say we make your resume in this format, I say it's pretty cool</p>
+        <button type="button" class="nes-btn is-primary secondaage">Time nai hai</button>
+        <button type="button" class="nes-btn is-error enditsecond">breakup!</button>
+   </div>
+   <div class="nes-container with-title third">
+    <span class="title">Sleep</span> 
+    <p>Well, lets talk about sleep</p>
+    
+    <p>We have screwed up each others sleep schedule a lot , and ironically we feel the most guilty when we wake up the other from sleep.<br>
+   
+    
+    </p>
+    <button type="button" class="nes-btn is-primary thirdaage">More cringe content</button>
+    <button type="button" class="nes-btn is-error enditthird">maa chuda</button>
+</div>
+<div class="nes-container with-title fourth">
+  <span class="title">Gift Lelo</span> 
+  <p>
+    I could have done more,  but for now me tired, nonethless yours is still better than mine , get your gift kiddo 
+  </p>
+  <p>Happy birthday ,</p>
+  
+  <button type="button" class="nes-btn is-primary giftsend">Gift Lelo</button>
+</div>
+   <!-- <div style="position: fixed; z-index: -99; width: 100%; height: 100%">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/papuvlVeZg8?autoplay=1?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div> -->
 </body>
 <style>
     .nes-container{
@@ -21,5 +54,39 @@
         margin-top: 35vh;
         width: 50%;
     }
+    .second,.third{
+        display: none;
+    }
+
 </style>
+<script>
+  const btn11 = document.getElementsByClassName("firstaage");
+  const btn12 = document.getElementsByClassName("enditfirst");
+  const button21 = document.getElementsByClassName("secondaage");
+  const button22 = document.getElementsByClassName("enditsecond");
+  const giftbutton = document.getElementsByClassName("giftsend");
+  btn11[0].addEventListener("click", function(){
+    document.getElementsByClassName("first")[0].style.display = "none";
+    document.getElementsByClassName("second")[0].style.display = "block";
+  } );
+  btn12[0].addEventListener("click", function(){
+    document.getElementsByClassName("first")[0].style.display = "none";
+    document.getElementsByClassName("second")[0].style.display = "block";
+    alert("lol you aint getting out");
+  } );
+  button21[0].addEventListener("click", function(){
+    document.getElementsByClassName("second")[0].style.display = "none";
+    document.getElementsByClassName("third")[0].style.display = "block";
+  } );
+  button22[0].addEventListener("click", function(){
+    document.getElementsByClassName("second")[0].style.display = "none";
+    document.getElementsByClassName("third")[0].style.display = "block";
+    alert("tu maa chuda bahut mehnat laga");
+  } );
+  giftbutton[0].addEventListener("click", function(){
+    fetch("adalineapi-qgni5zpsu-rasenrhino.vercel.app/api/hello").then(res=>res.json()).then(data=>{
+      console.log(data);
+    } );
+} );
+</script>
 </html>

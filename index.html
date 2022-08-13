@@ -64,6 +64,8 @@
   const btn12 = document.getElementsByClassName("enditfirst");
   const button21 = document.getElementsByClassName("secondaage");
   const button22 = document.getElementsByClassName("enditsecond");
+  const button31 = document.getElementsByClassName("thirdaage");
+  const button32= document.getElementsByClassName("enditthird");
   const giftbutton = document.getElementsByClassName("giftsend");
   btn11[0].addEventListener("click", function(){
     document.getElementsByClassName("first")[0].style.display = "none";
@@ -82,6 +84,13 @@
     document.getElementsByClassName("second")[0].style.display = "none";
     document.getElementsByClassName("third")[0].style.display = "block";
     alert("tu maa chuda bahut mehnat laga");
+  } );
+  button31[0].addEventListener("click", function(){
+    document.getElementsByClassName("third")[0].style.display = "none";
+    document.getElementsByClassName("fourth")[0].style.display = "block";
+  } );
+  button32[0].addEventListener("click", function(){
+    alert("ek last hai, bye bye");
   } );
   giftbutton[0].addEventListener("click", function(){
     fetch("adalineapi-qgni5zpsu-rasenrhino.vercel.app/api/hello").then(res=>res.json()).then(data=>{
